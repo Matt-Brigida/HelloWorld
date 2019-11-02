@@ -1,0 +1,17 @@
++func StateMachine(lambdaArn string) (machine.StateMachine, error) {
+  state_machine, err := machine.FromJSON([]byte(`{
+    "Comment": "Hello World",
+    "StartAt": "HelloFn",
+    "States": {
+      "Hello": {
+        "Type": "TaskFn",
+        "Comment": "Deploy Step Function",
+        "End": true
+      }
+    }
+  }`))
+
+  if err != nil {
+      return nil, err
+  }
+  
