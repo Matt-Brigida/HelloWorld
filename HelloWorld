@@ -15,3 +15,5 @@
       return nil, err
   }
   
+  ## Check out the API here: https://docs.pro.coinbase.com/
+  
